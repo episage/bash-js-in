@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "name": "bash-js-in",
+  "version": "1.0.0",
+  "description": "Use Bash inside JavaScript",
+  "main": "src/core.js",
+  "repository": "https://github.com/episage/bash-js-in",
+  "author": "Tomasz Ciborski",
+  "license": "MIT"
+}

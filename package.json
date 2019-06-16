@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "bash-js-in",
   "description": "Use Bash inside JavaScript",
   "main": "src/core.js",
@@ -14,7 +14,12 @@
   },
   "keywords": [
     "bash",
-    "js"
+    "js",
+    "javascript",
+    "linux",
+    "cli",
+    "shell",
+    "terminal"
   ],
   "dependencies": {
     "shelljs": "^0.8.3"

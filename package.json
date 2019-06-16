@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "bash-js-in",
   "description": "Use Bash inside JavaScript",
   "main": "src/core.js",

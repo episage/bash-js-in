@@ -27,7 +27,7 @@ var { Run, Command } = require('bash-js-in');
 async function* seriesOfCommands() {
     // get my IP address
     var myIp = yield Command('curl --silent https://canihazip.com/s');
-    console.log(JSON.stringify(myIp, null, 2))
+    console.log(`my IP is ${myIp.value}`);
 
     // get a Quote of the Day
     var quoteOfTheDay = yield Command(`curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'`);
@@ -38,10 +38,7 @@ async function* seriesOfCommands() {
 
 Result
 ``` text
-{
-  "command": "curl --silent https://canihazip.com/s",
-  "value": "78.8.212.144\n"
-}
+my IP is 72.8.212.142
 He who is not courageous enough to take risks will accomplish nothing in life. -- Mohamad Ali
 executed these commands: curl --silent https://canihazip.com/s and curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'
 ```

@@ -12,6 +12,7 @@ You want to save your time because you are not Bash expert (yet)?
  - using Bash inside JavaScript
  - Bash output redirecition to JavaScript
  - JavaScript backticks `` templating for Bash
+ - outputs command results to STDIN so it can be redirected
 
 ## Requirements
 
@@ -20,31 +21,59 @@ You want to save your time because you are not Bash expert (yet)?
 ## Usage
 
 ``` javascript
-var { Run, Command } = require('bash-js-in');
+var { Run, Command } = require('../src/core');
 
 (async function () {
-    var allExecutedCommands = await Run(seriesOfCommands());
-
-    console.log(`executed these commands: ${allExecutedCommands.map(c => c.command).join(' and ')}`);
+    var results = await Run(seriesOfCommands());
+    console.log(`executed ${results.length} commands`);
 })();
 
 async function* seriesOfCommands() {
     // get my IP address
     var myIp = yield Command('curl --silent https://canihazip.com/s');
-    console.log(`my IP is ${myIp.value}`);
+    console.log(`\t＼（＾ ＾）／ my IP is ${myIp.value}`);
 
     // get a Quote of the Day
     var quoteOfTheDay = yield Command(`curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'`);
     var quote = JSON.parse(quoteOfTheDay.value).contents.quotes[0];
-    console.log(`${quote.quote} -- ${quote.author}`);
+    console.log(`\t"${quote.quote}" -- ${quote.author}`);
 }
 ```
 
 Result
 ``` text
-my IP is 72.8.212.142
-He who is not courageous enough to take risks will accomplish nothing in life. -- Mohamad Ali
-executed these commands: curl --silent https://canihazip.com/s and curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'
+31.60.22.70
+        ＼（＾ ＾）／ my IP is 31.60.22.70
+
+{
+    "success": {
+        "total": 1
+    },
+    "contents": {
+        "quotes": [
+            {
+                "quote": "He who is not courageous enough to take risks will accomplish nothing in life.",
+                "author": "Mohamad Ali",
+                "length": null,
+                "tags": [
+                    "courage",
+                    "inspire",
+                    "risk"
+                ],
+                "category": "inspire",
+                "title": "Inspiring Quote of the day",
+                "date": "2019-06-16",
+                "id": null
+            }
+        ],
+        "copyright": "2017-19 theysaidso.com"
+    }
+}
+        "He who is not courageous enough to take risks will accomplish nothing in life." -- Mohamad Ali
+
+Summary:
+===
+executed 2 commands
 ```
 
 ## Usages

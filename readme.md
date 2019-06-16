@@ -41,8 +41,6 @@ async function* seriesOfCommands() {
     var quote = JSON.parse(quoteOfTheDay.value).contents.quotes[0];
     console.log(`\t"${quote.quote}" -- ${quote.author}`);
 }
-
-}
 ```
 
 Result

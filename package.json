@@ -5,7 +5,7 @@
   "main": "src/core.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:episage/bash-js-in.git"
+    "url": "git://github.com/episage/bash-js-in.git"
   },
   "author": "Tomasz Ciborski <ciborski.com>",
   "license": "MIT",

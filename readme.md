@@ -2,6 +2,10 @@
 
 Have you ever wanted to Bash script something but Bash is not your favourite language?
 
+Is the script you want to write complex?
+
+You want to save your time because you are not Bash expert (yet)?
+
 ## Features
 
  - vanilla JavaScript
@@ -11,7 +15,7 @@ Have you ever wanted to Bash script something but Bash is not your favourite lan
 
 ## Requirements
 
- - NodeJS 8
+ - NodeJS 8 (for async, await and yield)
 
 ## Usage
 

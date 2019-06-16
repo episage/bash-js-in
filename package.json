@@ -1,11 +1,21 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "bash-js-in",
   "description": "Use Bash inside JavaScript",
   "main": "src/core.js",
-  "repository": "https://github.com/episage/bash-js-in",
-  "author": "Tomasz Ciborski",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:episage/bash-js-in.git"
+  },
+  "author": "Tomasz Ciborski <ciborski.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "bash",
+    "js"
+  ],
   "dependencies": {
     "shelljs": "^0.8.3"
   }

@@ -21,7 +21,7 @@ You want to save your time because you are not Bash expert (yet)?
 ## Usage
 
 ``` javascript
-var { Run, Command } = require('../src/core');
+var { Run, Command } = require('bash-js-in');
 
 (async function () {
     var results = await Run(seriesOfCommands());

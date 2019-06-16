@@ -25,6 +25,9 @@ var { Run, Command } = require('../src/core');
 
 (async function () {
     var results = await Run(seriesOfCommands());
+    console.log();
+    console.log(`Summary:`);
+    console.log(`===`);
     console.log(`executed ${results.length} commands`);
 })();
 
@@ -37,6 +40,8 @@ async function* seriesOfCommands() {
     var quoteOfTheDay = yield Command(`curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'`);
     var quote = JSON.parse(quoteOfTheDay.value).contents.quotes[0];
     console.log(`\t"${quote.quote}" -- ${quote.author}`);
+}
+
 }
 ```
 

@@ -42,3 +42,8 @@ my IP is 72.8.212.142
 He who is not courageous enough to take risks will accomplish nothing in life. -- Mohamad Ali
 executed these commands: curl --silent https://canihazip.com/s and curl --silent -X GET --header 'Accept: application/json' 'https://quotes.rest/qod'
 ```
+
+## Usages
+
+ - maintenance scripts
+ - advanced Bash output manipulation
